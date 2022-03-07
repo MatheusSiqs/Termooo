@@ -1,0 +1,282 @@
+/*
+Site baseado no jogo term.ooo desenvolvido por Matheus Siqueira Fernandes
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css");
+
+:root{
+--prim:#483434;
+--sec:#6B4F4F;
+--tri:#EED6C4;
+--quar:#FFF3E4;
+--sucesso:#198754;
+--warning:#ffc107;
+--gray:#adb5bd;
+}
+
+body{
+	background-color: var(--prim);
+	counter-reset:section;
+}
+
+/* Estilo para o texto interno*/
+.textoResp{
+	font-family: 'Varela Round', sans-serif;
+	font-size:45px;
+	
+	text-align:center;
+}
+
+/* Celula que acomoda a letra */
+.tDados{
+	border: 1px solid var(--tri);
+	background-color: var(--sec);
+	color:var(--quar);
+	
+	width:62px;
+	height:62px;
+	
+	align-items:center;
+
+	transition: 2s background-color;
+	transform-style: preserve-3d;
+	
+	border-radius:6px;
+	
+	
+}
+/* Conteiner que mantém as celula*/
+.container{
+	display:inline-block;
+	
+	align-items:center;
+	align-self:center;
+	
+	position:abolute;
+		
+	width:auto;
+	height:auto;
+}
+
+/* Estilo do modal para finalizar o jogo*/
+
+.modal{
+	display:none;
+	position:fixed;
+	
+	z-index:1;
+	top:0;
+	left:0;
+	
+	width:100%;
+	height:100%;
+	
+	overflow:auto;
+	
+	background-color:rgb(0,0,0);
+	background-color:rgba(0,0,0,0.4);
+	
+	overflow: auto;
+	
+	
+}
+
+.modal-content{
+	background-color:#01010133;
+	color:white;
+	margin: 5.5% auto;
+	padding:25px;
+	border: 2px solid #888;
+	width:43%;
+	border-radius:15px;
+	
+	backdrop-filter: blur(5px);
+	
+	overflow: auto;
+	
+	
+}
+
+/* Botão para fechar o modal*/
+.close{
+	color: #aaa;
+	float:right;
+	font-size:28px;
+	font-weight:bold;
+}
+
+.close:hover,
+.close:focus{
+	color:black;
+	text-decoration:none;
+	cursor:pointer;
+}
+
+/*Frame para controlar a tabela*/
+.frame{
+	justify-content:center;
+	align-content:center;
+		
+	display:flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+/* Label para log de acerto e erro*/
+#label{
+	color:white;
+	font-family: 'Varela Round', sans-serif;
+	font-size:25px;
+	text-align:center;
+	
+	background-color:#32a852;
+	
+	margin:auto;
+	padding:10px;
+	
+	border: 1px dotted #888;
+	width:322px;
+	
+	border-radius:15px;
+	
+	display:block;
+
+	visibility: hidden;
+	
+	transition: 2s opacity;
+}
+/*
+	Configuração para os icones dos menus
+*/
+#estatistica{
+	font-size: 1rem;
+	position:relative;
+	left:144px;
+	
+	color: var(--tri);
+	border: 2px solid var(--tri);
+	padding:3px;
+	border-radius:10px;	
+	cursor:pointer;
+}
+
+#interroga{
+	font-size: 1rem;
+	position:relative;
+	left:-144px;
+	
+	color: var(--tri);
+	border: 2px solid var(--tri);
+	padding:3px;
+	border-radius:10px;
+	cursor:pointer;
+}
+
+/*
+
+	Configuração para os itens do modal
+
+*/
+
+.fStatus{	
+	display:flex;
+	flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    align-content: flex-end;
+}
+
+.fTries{
+	display:flex;
+	flex-direction: column;
+    
+}
+
+.fTries div{
+	flex-wrap:no-wrap;
+	display:flex;
+	text-align:start;
+}
+
+.fTries div section{
+	margin-right:16px;
+}
+
+.tBarra{
+	background-color:lightblue;
+	margin:0.5px;
+	padding:2px;
+	padding-right:6px;
+	text-align: end;
+	min-width: 32px;
+}
+
+.wrap_text_modal{
+	font-family: 'Varela Round', sans-serif;
+	font-size:1.5rem;
+	text-align:center;
+}
+
+/*
+	Teclado 
+*/
+
+.teclado{
+	display:flex;
+	margin:auto;
+	flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.tecla{
+	font-family: 'Varela Round', sans-serif;
+	text-align:center;
+	font-size:35px;
+	color: var(--quar);
+
+	
+	background-color: var(--sec);
+	
+	padding:15px;
+	margin:1px;
+	
+	min-width:30px;
+	min-height:30px;
+	
+	border-radius:4px;
+	border: 2.5px solid var(--quar);
+	
+	cursor:pointer;
+	
+	transition: 2s background-color;
+	
+/*	animation-name: anim;
+	animation-duration: 10s; 
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	*/
+}	
+	
+
+#tLayer1{
+	display:flex;
+}
+
+#tLayer2{
+	display:flex;
+}
+
+#tLayer3{
+	display:flex;
+}
+
+@keyframes anim{
+	0% {transform: rotate(0deg);}
+	100%{transform: rotate(360deg);}
+}
+
+
+
