@@ -21,6 +21,7 @@ Foi utilizado o a API https://api.dicionario-aberto.net/index.html para obter aa
 <a id="screenshoot"><h1>Screenshoot</h1></a>
 
 ![screenshot](/Screenshot/img1.png)
+![screenshot](/Screenshot/img2.png)
 
 <a href="#notas" id="notas"><h1>Notas</h1></a>
 Eu fiz esse jogo como divertimento para aprender e estudar Css e js
