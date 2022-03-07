@@ -16,7 +16,9 @@ Para poder jogar o clone do "term.ooo" basta baixar os arquivos e executar o **i
 
 <a id="funcionamento"><h1>Funcionamento</h1></a>
 
-Foi utilizado o a API https://api.dicionario-aberto.net/index.html para obter aa palavra aleatória.
+Foi utilizado o a API https://api.dicionario-aberto.net/index.html para obter a palavra aleatória.
+
+E os resultador são salvos no navegador via localStorage
 
 <a id="screenshoot"><h1>Screenshoot</h1></a>
 
